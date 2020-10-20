@@ -4,7 +4,10 @@ var cognomeInput, risposta;
 var aggiungi = false;
 var newIndice;
 do{
-    cognomeInput = prompt("inserisci il cognome: ");
+    cognomeInput = prompt("inserisci il cognome: ").trim();
+    while(cognomeInput == " "){
+        cognomeInput = prompt("Errore hai inserito una stringa vuota, inserisci un cognome valido: ").trim();
+    }
     arrayCognome.push(cognomeInput);
     // console.log(newArrayCognome);
     risposta = prompt("Vuoi inserire un altro cognome nella lista? premere 's' per aggiungere oppure 'n': ");
