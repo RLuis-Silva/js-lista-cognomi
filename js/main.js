@@ -1,7 +1,8 @@
 var arrayCognome = ["bianchi", "rossi", "dunzioni", "balsano", "giorgini"];
+var newArrayCognome = [];
 var cognomeInput, risposta;
 var aggiungi = false;
-
+var newIndice;
 do{
     cognomeInput = prompt("inserisci il cognome: ");
     arrayCognome.push(cognomeInput);
@@ -22,8 +23,12 @@ console.log(arrayCognome.sort());
 
 // cambio indice + 1
 //NON FUNZIONA
-// for(i = 0; i < arrayCognome.length; i++){
-//     newArrayCognome.push();
-// }
+for(var i = 0; i < arrayCognome.length; i++){
+    for(var j = 1; j == arrayCognome.length; j++ ){
+        newArrayCognome.push(arrayCognome[i]);
+        // newIndice = newArrayCognome.indexOf(newArrayCognome[j]);
+    }
+   
+}
 
-// console.log(newArrayCognome);
+console.log(newArrayCognome);
